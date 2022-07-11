@@ -23,3 +23,23 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('loginSession', () => {
+
+    cy.intercept('POST', '/login').as('login')
+
+    const user = 'fulano@qa.com'
+    const password = 'teste'
+
+    cy.session([user, password], () => {
+        cy.visit('http://front.serverest.dev/login')
+        cy.get('[data-testid="email"]').type(user)
+        cy.get('[data-testid="senha"]').type(password)
+        cy.get('[data-testid="entrar"]').click()
+
+        cy.origin('https://serverest.dev', () => {
+            cy.wait('@login')
+        })
+    }) 
+})
+
