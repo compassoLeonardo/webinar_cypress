@@ -1,7 +1,7 @@
-import {el, userToRegister} from './_utils'
+import {elm, userToRegister} from './_utils'
 
 beforeEach('Deve logar utilizando o cy.session()', () => {
-    //Este comando está desenvolvido no caminho 'cypress/support/commands.js'
+    //Este comando está implementado no caminho 'cypress/support/commands.js'
     cy.loginSession()
 })
 
@@ -15,16 +15,16 @@ it('Deve cadastrar um novo usuário administrador', () => {
     cy.visit('http://front.serverest.dev/admin/home')
 
     //Valido se o botão de cadastrar usuários é visível e clico nele.
-    cy.get(el('cadastrar-usuarios')).should('be.visible').click()
+    cy.get(elm('cadastrar-usuarios')).should('be.visible').click()
 
     //Cadastro um novo usuário (gerado na pasta '_utils.js' com a biblioteca Faker)
-    cy.get(el('nome')).type(userToRegister.name)
-    cy.get(el('email')).type(userToRegister.email)
-    cy.get(el('password')).type(userToRegister.password)
+    cy.get(elm('nome')).type(userToRegister.name)
+    cy.get(elm('email')).type(userToRegister.email)
+    cy.get(elm('password')).type(userToRegister.password)
 
     //Marco a opção de administrador e clico no botão para cadastrar o usuário
-    cy.get(el('checkbox')).click()
-    cy.get(el('cadastrarUsuario')).click()
+    cy.get(elm('checkbox')).click()
+    cy.get(elm('cadastrarUsuario')).click()
 
     //Indico a url(origem) onde será encontrado a requisição de cadastro
     cy.origin('https://serverest.dev', () => {
@@ -41,7 +41,7 @@ it('Deve acessar a lista de usuários cadastrados e validar se userToRegister fo
     cy.visit('http://front.serverest.dev/admin/home')
 
     //Valido se o botão de listar usuários é visível e clico nele.
-    cy.get(el('listar-usuarios')).should('be.visible').click()
+    cy.get(elm('listar-usuarios')).should('be.visible').click()
 
     //Valido a nova URL
     cy.url().should('contains', '/listarusuarios')

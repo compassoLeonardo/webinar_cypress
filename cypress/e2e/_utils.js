@@ -1,6 +1,7 @@
+//Biblioteca com dados randômicos
 import faker from 'faker-br'
 
-export function el(name){
+export function elm(name){
     return `[data-testid="${name}"]`
 }
 
