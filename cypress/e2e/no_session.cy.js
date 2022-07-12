@@ -13,7 +13,7 @@ it('Deve cadastrar um novo usuário administrador', () => {
     //Preciso fazer isso pois o cadastro é feito em outra origin (https://serverest.dev)
     cy.intercept('POST', '/usuarios').as('cadastro')
 
-    //Para utilizarmos o cy.session() em cada caso de teste devemos acessar uma URL dentro da aplicação.
+    //Após o login, acesso a página home da aplicação
     cy.visit('http://front.serverest.dev/admin/home')
 
     //Valido se o botão de cadastrar usuários é visível e clico nele.
@@ -70,6 +70,7 @@ it('Deve acessar a lista de usuários cadastrados e validar se userToRegister fo
         expect(lista.usuarios).to.contains(userToRegister.name)
     })
 })
+
 
 
  
