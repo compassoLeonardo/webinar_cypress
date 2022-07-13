@@ -9,5 +9,6 @@
 5. Executar e explicar a spec 'no_session.cy'
 6. Mostrar o command `cy.loginSession()`
 7. Executar e explicar a spec 'session.cy'
+- Mostrar o cache criado com a sessão de login e comparar o tempo de execução
 
 # Readme com passo a passo para execução

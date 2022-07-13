@@ -1,5 +1,6 @@
 import {elm, userToRegister} from './_utils'
 
+//As vezes funciona somente com before, as vezes não...
 beforeEach('Deve logar utilizando o cy.session()', () => {
     //Este comando está implementado no caminho 'cypress/support/commands.js'
     cy.loginSession()
