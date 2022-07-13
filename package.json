@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/compassoLeonardo/oficina_cypress#readme",
   "devDependencies": {
-    "@faker-js/faker": "github:faker-js/faker",
     "cypress": "^10.3.0",
     "faker-br": "^0.4.1"
   }

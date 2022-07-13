@@ -1,14 +1,11 @@
-### Repositório destinado a construção de exemplos de códigos de automação de testes com Cypress
+## Para executar o projeto em sua máquina local siga o passo a passo:
 
-### Script da apresentação:
+* Garanta que você possui o Node instalado em sua máquina:
+    - Abra um terminal de comando e execute: `node --version`.
+    - Deve ser mostrada uma versão superior a v12.
 
-1. Mostrar a aplicação em teste `front.serverest.dev` e `serverest.dev`. (Elementos das páginas, rota para login e cadastro de usuário)
-2. Mostrar o front-end utilizando o back-end (diferentes origens) pelo navegador.
-3. Mostrar o `_utils.js`
-4. Mostrar a propriedade `experimentalSessionAndOrigin` no cypress.config.js
-5. Executar e explicar a spec 'no_session.cy'
-6. Mostrar o command `cy.loginSession()`
-7. Executar e explicar a spec 'session.cy'
-- Mostrar o cache criado com a sessão de login e comparar o tempo de execução
-
-# Readme com passo a passo para execução
+1. Clone o repositório para sua máquina local utilizando o GIT.
+2. Acesse a pasta *oficina_cypress* e execute o comando `npm install`
+3. Após finalizado a instação das dependência execute o comando `npm run cy:open`
+    - Deve abrir a nova tela gráfica do Cypress.
+    - Escolha a opção de teste *end-to-end* e após a spec que deseja executar (session.cy.js ou no_session.cy.js)
