@@ -34,7 +34,7 @@ it('Deve cadastrar um novo usuário administrador com sucesso.', () => {
     })
 })
 
-it('Deve acessar a lista de usuários cadastrados e validar se userToRegister foi cadastrado', () => {
+it('Deve salvar a lista de usuários cadastrados e validar se userToRegister foi cadastrado', () => {
     //Valido se o botão de listar usuários é visível e clico nele.
     cy.get(elm('listar-usuarios')).should('be.visible').click()
 

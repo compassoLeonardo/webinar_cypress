@@ -1,6 +1,5 @@
 import {elm, userToRegister} from './_utils'
 
-//As vezes funciona somente com before, as vezes não...
 beforeEach('Deve logar utilizando o cy.session()', () => {
     //Este comando está implementado no caminho 'cypress/support/commands.js'
     cy.loginSession()
@@ -36,7 +35,7 @@ it('Deve cadastrar um novo usuário administrador', () => {
     })
 })
 
-it('Deve acessar a lista de usuários cadastrados e validar se userToRegister foi cadastrado', () => {
+it('Deve salvar a lista de usuários cadastrados e validar se userToRegister foi cadastrado', () => {
 
     //Para utilizarmos o cy.session() em cada caso de teste devemos acessar uma URL dentro da aplicação.
     cy.visit('http://front.serverest.dev/admin/home')
