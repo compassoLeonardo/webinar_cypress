@@ -1,4 +1,5 @@
-<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/> linkedin.com/in/leo-kartabil/
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/> <br>
+**linkedin.com/in/leo-kartabil/**
 
 ## Para executar o projeto em sua máquina local siga o passo a passo:
 
